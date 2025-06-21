@@ -1,0 +1,7 @@
+package.json
+package-lock.json
+db.sqlite3
+requirements.txt
+vite.config.ts
+index.css
+tests.py
