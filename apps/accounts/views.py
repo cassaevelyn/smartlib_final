@@ -327,6 +327,7 @@ def verify_otp_view(request):
         
         # Update user status
         user.is_active = True  # Activate the user
+        user.is_verified = True  # Mark as verified
         user.save()
         
         # Log activity
@@ -416,6 +417,7 @@ class EmailVerificationConfirmView(APIView):
             
             # Update user status
             user.is_active = True  # Activate the user
+            user.is_verified = True  # Mark as verified
             user.save()
             
             # Log activity
