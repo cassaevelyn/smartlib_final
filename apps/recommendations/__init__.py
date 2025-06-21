@@ -1,1 +1,0 @@
-# Recommendations app for personalized content recommendations
