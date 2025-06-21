@@ -5,3 +5,10 @@ requirements.txt
 vite.config.ts
 index.css
 tests.py
+dashboard/*
+books/*
+events/*
+library/*
+recommendations/*
+notifications/*
+frontend/*
