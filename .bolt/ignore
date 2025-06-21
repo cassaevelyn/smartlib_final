@@ -12,3 +12,4 @@ library/*
 recommendations/*
 notifications/*
 frontend/*
+apps/*
