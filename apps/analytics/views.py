@@ -120,10 +120,10 @@ def get_user_analytics(request):
             count=Count('id')
         ).order_by('date')
         
-        # User approval rate
+        # User verification rate
         total_users = User.objects.count()
-        approved_users = User.objects.filter(is_approved=True).count()
-        approval_rate = (approved_users / total_users * 100) if total_users > 0 else 0
+        verified_users = User.objects.filter(is_verified=True).count()
+        verification_rate = (verified_users / total_users * 100) if total_users > 0 else 0
         
         # User activity
         active_users_last_30_days = User.objects.filter(
@@ -134,7 +134,7 @@ def get_user_analytics(request):
         return Response({
             'users_by_role': users_by_role,
             'user_registrations': user_registrations,
-            'approval_rate': approval_rate,
+            'verification_rate': verification_rate,
             'active_users': active_users_last_30_days,
             'total_users': total_users,
         })
